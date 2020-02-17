@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>第 7 章 概率的定义 | 数理统计讲义</title>
+  <meta name="description" content="第 7 章 概率的定义 | 数理统计讲义" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="第 7 章 概率的定义 | 数理统计讲义" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="images/cover.jpg" />
+  <meta property="og:description" content="第 7 章 概率的定义 | 数理统计讲义" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第 7 章 概率的定义 | 数理统计讲义" />
+  
+  <meta name="twitter:description" content="第 7 章 概率的定义 | 数理统计讲义" />
+  <meta name="twitter:image" content="images/cover.jpg" />
+
+<meta name="author" content="何志坚" />
+
+
+<meta name="date" content="2020-01-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="prob.html"/>
+<link rel="next" href="section-130.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">数理统计讲义</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#section-1"><i class="fa fa-check"></i>致谢</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#section-2"><i class="fa fa-check"></i>版权</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="author.html"><a href="author.html"><i class="fa fa-check"></i>作者简介</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> 绪论</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#section-3"><i class="fa fa-check"></i><b>1.1</b> 学科介绍</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#section-4"><i class="fa fa-check"></i><b>1.1.1</b> 统计学的发展简史</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#section-5"><i class="fa fa-check"></i><b>1.1.2</b> 频率学派与贝叶斯学派</a></li>
+<li class="chapter" data-level="1.1.3" data-path="intro.html"><a href="intro.html#section-6"><i class="fa fa-check"></i><b>1.1.3</b> 统计学专业</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#section-7"><i class="fa fa-check"></i><b>1.2</b> 基本概念</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#section-8"><i class="fa fa-check"></i><b>1.2.1</b> 总体</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#section-9"><i class="fa fa-check"></i><b>1.2.2</b> 样本</a></li>
+<li class="chapter" data-level="1.2.3" data-path="intro.html"><a href="intro.html#section-10"><i class="fa fa-check"></i><b>1.2.3</b> 简单随机抽样</a></li>
+<li class="chapter" data-level="1.2.4" data-path="intro.html"><a href="intro.html#section-11"><i class="fa fa-check"></i><b>1.2.4</b> 案例</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#section-12"><i class="fa fa-check"></i><b>1.3</b> 概率分布族</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="intro.html"><a href="intro.html#section-13"><i class="fa fa-check"></i><b>1.3.1</b> 常用的参数族</a></li>
+<li class="chapter" data-level="1.3.2" data-path="intro.html"><a href="intro.html#section-14"><i class="fa fa-check"></i><b>1.3.2</b> 伽玛分布族</a></li>
+<li class="chapter" data-level="1.3.3" data-path="intro.html"><a href="intro.html#section-15"><i class="fa fa-check"></i><b>1.3.3</b> 贝塔分布族</a></li>
+<li class="chapter" data-level="1.3.4" data-path="intro.html"><a href="intro.html#section-16"><i class="fa fa-check"></i><b>1.3.4</b> 指数型分布族</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#section-17"><i class="fa fa-check"></i><b>1.4</b> 统计量与估计量</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#section-18"><i class="fa fa-check"></i><b>1.5</b> 充分统计量</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#section-19"><i class="fa fa-check"></i><b>1.5.1</b> 因子分解定理</a></li>
+<li class="chapter" data-level="1.5.2" data-path="intro.html"><a href="intro.html#section-20"><i class="fa fa-check"></i><b>1.5.2</b> 因子分解定理的应用</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#section-21"><i class="fa fa-check"></i><b>1.6</b> 抽样分布</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="intro.html"><a href="intro.html#section-22"><i class="fa fa-check"></i><b>1.6.1</b> 样本均值的抽样分布</a></li>
+<li class="chapter" data-level="1.6.2" data-path="intro.html"><a href="intro.html#section-23"><i class="fa fa-check"></i><b>1.6.2</b> 卡方分布</a></li>
+<li class="chapter" data-level="1.6.3" data-path="intro.html"><a href="intro.html#section-24"><i class="fa fa-check"></i><b>1.6.3</b> 正态总体抽样分布定理</a></li>
+<li class="chapter" data-level="1.6.4" data-path="intro.html"><a href="intro.html#t"><i class="fa fa-check"></i><b>1.6.4</b> t分布</a></li>
+<li class="chapter" data-level="1.6.5" data-path="intro.html"><a href="intro.html#section-25"><i class="fa fa-check"></i><b>1.6.5</b> 样本均值与标准差之比的抽样分布</a></li>
+<li class="chapter" data-level="1.6.6" data-path="intro.html"><a href="intro.html#f"><i class="fa fa-check"></i><b>1.6.6</b> F分布</a></li>
+<li class="chapter" data-level="1.6.7" data-path="intro.html"><a href="intro.html#section-26"><i class="fa fa-check"></i><b>1.6.7</b> 两个独立正态总体的抽样分布</a></li>
+<li class="chapter" data-level="1.6.8" data-path="intro.html"><a href="intro.html#section-27"><i class="fa fa-check"></i><b>1.6.8</b> 顺序统计量</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="intro.html"><a href="intro.html#section-28"><i class="fa fa-check"></i><b>1.7</b> 分位数</a></li>
+<li class="chapter" data-level="1.8" data-path="intro.html"><a href="intro.html#ex2"><i class="fa fa-check"></i><b>1.8</b> 本章习题</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="est.html"><a href="est.html"><i class="fa fa-check"></i><b>2</b> 估计</a><ul>
+<li class="chapter" data-level="2.1" data-path="est.html"><a href="est.html#section-29"><i class="fa fa-check"></i><b>2.1</b> 参数估计</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="est.html"><a href="est.html#section-30"><i class="fa fa-check"></i><b>2.1.1</b> 矩估计法</a></li>
+<li class="chapter" data-level="2.1.2" data-path="est.html"><a href="est.html#section-31"><i class="fa fa-check"></i><b>2.1.2</b> 最大似然估计法</a></li>
+<li class="chapter" data-level="2.1.3" data-path="est.html"><a href="est.html#section-32"><i class="fa fa-check"></i><b>2.1.3</b> 矩估计与最大似然估计的对比</a></li>
+<li class="chapter" data-level="2.1.4" data-path="est.html"><a href="est.html#section-33"><i class="fa fa-check"></i><b>2.1.4</b> 混合正态分布的参数估计</a></li>
+<li class="chapter" data-level="2.1.5" data-path="est.html"><a href="est.html#em"><i class="fa fa-check"></i><b>2.1.5</b> EM算法</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="est.html"><a href="est.html#section-34"><i class="fa fa-check"></i><b>2.2</b> 估计的优良性标准</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="est.html"><a href="est.html#section-35"><i class="fa fa-check"></i><b>2.2.1</b> 无偏性</a></li>
+<li class="chapter" data-level="2.2.2" data-path="est.html"><a href="est.html#section-36"><i class="fa fa-check"></i><b>2.2.2</b> 均方误差</a></li>
+<li class="chapter" data-level="2.2.3" data-path="est.html"><a href="est.html#section-37"><i class="fa fa-check"></i><b>2.2.3</b> 一致最小方差无偏估计</a></li>
+<li class="chapter" data-level="2.2.4" data-path="est.html"><a href="est.html#section-38"><i class="fa fa-check"></i><b>2.2.4</b> 统计量的大样本性质</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="est.html"><a href="est.html#section-39"><i class="fa fa-check"></i><b>2.3</b> 区间估计</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="est.html"><a href="est.html#section-40"><i class="fa fa-check"></i><b>2.3.1</b> 区间估计的定义</a></li>
+<li class="chapter" data-level="2.3.2" data-path="est.html"><a href="est.html#section-41"><i class="fa fa-check"></i><b>2.3.2</b> 枢轴量法</a></li>
+<li class="chapter" data-level="2.3.3" data-path="est.html"><a href="est.html#section-42"><i class="fa fa-check"></i><b>2.3.3</b> 单个正态总体的区间估计</a></li>
+<li class="chapter" data-level="2.3.4" data-path="est.html"><a href="est.html#section-43"><i class="fa fa-check"></i><b>2.3.4</b> 两个独立正态总体的区间估计</a></li>
+<li class="chapter" data-level="2.3.5" data-path="est.html"><a href="est.html#section-44"><i class="fa fa-check"></i><b>2.3.5</b> 非正态总体参数的区间估计</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="est.html"><a href="est.html#section-45"><i class="fa fa-check"></i><b>2.4</b> 分布的估计</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="est.html"><a href="est.html#section-46"><i class="fa fa-check"></i><b>2.4.1</b> 分布函数的估计</a></li>
+<li class="chapter" data-level="2.4.2" data-path="est.html"><a href="est.html#section-47"><i class="fa fa-check"></i><b>2.4.2</b> 直方图法</a></li>
+<li class="chapter" data-level="2.4.3" data-path="est.html"><a href="est.html#section-48"><i class="fa fa-check"></i><b>2.4.3</b> 核估计法</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="est.html"><a href="est.html#ex3"><i class="fa fa-check"></i><b>2.5</b> 本章习题</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="test.html"><a href="test.html"><i class="fa fa-check"></i><b>3</b> 假设检验</a><ul>
+<li class="chapter" data-level="3.1" data-path="test.html"><a href="test.html#section-49"><i class="fa fa-check"></i><b>3.1</b> 女士品茶</a></li>
+<li class="chapter" data-level="3.2" data-path="test.html"><a href="test.html#section-50"><i class="fa fa-check"></i><b>3.2</b> 基本概念</a></li>
+<li class="chapter" data-level="3.3" data-path="test.html"><a href="test.html#ump"><i class="fa fa-check"></i><b>3.3</b> UMP检验和似然比检验</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="test.html"><a href="test.html#ump-1"><i class="fa fa-check"></i><b>3.3.1</b> UMP检验的定义</a></li>
+<li class="chapter" data-level="3.3.2" data-path="test.html"><a href="test.html#section-51"><i class="fa fa-check"></i><b>3.3.2</b> 似然比检验方法</a></li>
+<li class="chapter" data-level="3.3.3" data-path="test.html"><a href="test.html#ump-2"><i class="fa fa-check"></i><b>3.3.3</b> 正态分布均值的UMP检验</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="test.html"><a href="test.html#section-52"><i class="fa fa-check"></i><b>3.4</b> 单参数指数型分布族</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="test.html"><a href="test.html#section-53"><i class="fa fa-check"></i><b>3.4.1</b> 小结</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="test.html"><a href="test.html#section-54"><i class="fa fa-check"></i><b>3.5</b> 广义似然比检验</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="test.html"><a href="test.html#section-55"><i class="fa fa-check"></i><b>3.5.1</b> 正态总体的假设检验</a></li>
+<li class="chapter" data-level="3.5.2" data-path="test.html"><a href="test.html#section-56"><i class="fa fa-check"></i><b>3.5.2</b> 两个独立正态总体的检验</a></li>
+<li class="chapter" data-level="3.5.3" data-path="test.html"><a href="test.html#section-57"><i class="fa fa-check"></i><b>3.5.3</b> 案例分析：山鸢尾和杂色鸢尾花差异性比较</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="test.html"><a href="test.html#section-58"><i class="fa fa-check"></i><b>3.6</b> 置信区间与假设检验的联系</a></li>
+<li class="chapter" data-level="3.7" data-path="test.html"><a href="test.html#p"><i class="fa fa-check"></i><b>3.7</b> p值</a></li>
+<li class="chapter" data-level="3.8" data-path="test.html"><a href="test.html#section-59"><i class="fa fa-check"></i><b>3.8</b> 多重检验</a></li>
+<li class="chapter" data-level="3.9" data-path="test.html"><a href="test.html#section-60"><i class="fa fa-check"></i><b>3.9</b> 伯努利分布的检验</a><ul>
+<li class="chapter" data-level="3.9.1" data-path="test.html"><a href="test.html#i"><i class="fa fa-check"></i><b>3.9.1</b> 单侧检验I</a></li>
+<li class="chapter" data-level="3.9.2" data-path="test.html"><a href="test.html#section-61"><i class="fa fa-check"></i><b>3.9.2</b> 女士品茶问题求解</a></li>
+<li class="chapter" data-level="3.9.3" data-path="test.html"><a href="test.html#ii"><i class="fa fa-check"></i><b>3.9.3</b> 单侧检验II</a></li>
+<li class="chapter" data-level="3.9.4" data-path="test.html"><a href="test.html#section-62"><i class="fa fa-check"></i><b>3.9.4</b> 双侧检验</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="test.html"><a href="test.html#section-63"><i class="fa fa-check"></i><b>3.10</b> 拟合优度检验</a><ul>
+<li class="chapter" data-level="3.10.1" data-path="test.html"><a href="test.html#mendel"><i class="fa fa-check"></i><b>3.10.1</b> Mendel的数据</a></li>
+<li class="chapter" data-level="3.10.2" data-path="test.html"><a href="test.html#section-64"><i class="fa fa-check"></i><b>3.10.2</b> 卡方检验</a></li>
+</ul></li>
+<li class="chapter" data-level="3.11" data-path="test.html"><a href="test.html#section-65"><i class="fa fa-check"></i><b>3.11</b> 小结</a></li>
+<li class="chapter" data-level="3.12" data-path="test.html"><a href="test.html#ex4"><i class="fa fa-check"></i><b>3.12</b> 本章习题</a></li>
+<li class="chapter" data-level="3.13" data-path="test.html"><a href="test.html#section-66"><i class="fa fa-check"></i><b>3.13</b> 习题答案</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>4</b> 线性回归</a><ul>
+<li class="chapter" data-level="4.1" data-path="regression.html"><a href="regression.html#section-67"><i class="fa fa-check"></i><b>4.1</b> 一元线性模型</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="regression.html"><a href="regression.html#section-68"><i class="fa fa-check"></i><b>4.1.1</b> 最小二乘估计</a></li>
+<li class="chapter" data-level="4.1.2" data-path="regression.html"><a href="regression.html#section-69"><i class="fa fa-check"></i><b>4.1.2</b> 期望和方差</a></li>
+<li class="chapter" data-level="4.1.3" data-path="regression.html"><a href="regression.html#section-70"><i class="fa fa-check"></i><b>4.1.3</b> 误差项的方差的估计</a></li>
+<li class="chapter" data-level="4.1.4" data-path="regression.html"><a href="regression.html#section-71"><i class="fa fa-check"></i><b>4.1.4</b> 抽样分布定理</a></li>
+<li class="chapter" data-level="4.1.5" data-path="regression.html"><a href="regression.html#section-72"><i class="fa fa-check"></i><b>4.1.5</b> 置信区间与假设检验</a></li>
+<li class="chapter" data-level="4.1.6" data-path="regression.html"><a href="regression.html#section-73"><i class="fa fa-check"></i><b>4.1.6</b> 案例分析1</a></li>
+<li class="chapter" data-level="4.1.7" data-path="regression.html"><a href="regression.html#section-74"><i class="fa fa-check"></i><b>4.1.7</b> 拟合的评估</a></li>
+<li class="chapter" data-level="4.1.8" data-path="regression.html"><a href="regression.html#section-75"><i class="fa fa-check"></i><b>4.1.8</b> 预测</a></li>
+<li class="chapter" data-level="4.1.9" data-path="regression.html"><a href="regression.html#section-76"><i class="fa fa-check"></i><b>4.1.9</b> 控制</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="regression.html"><a href="regression.html#section-77"><i class="fa fa-check"></i><b>4.2</b> 多元线性模型</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="regression.html"><a href="regression.html#section-78"><i class="fa fa-check"></i><b>4.2.1</b> 期望和方差</a></li>
+<li class="chapter" data-level="4.2.2" data-path="regression.html"><a href="regression.html#section-79"><i class="fa fa-check"></i><b>4.2.2</b> 误差项的方差的估计</a></li>
+<li class="chapter" data-level="4.2.3" data-path="regression.html"><a href="regression.html#section-80"><i class="fa fa-check"></i><b>4.2.3</b> 抽样分布定理</a></li>
+<li class="chapter" data-level="4.2.4" data-path="regression.html"><a href="regression.html#section-81"><i class="fa fa-check"></i><b>4.2.4</b> 置信区间和假设检验</a></li>
+<li class="chapter" data-level="4.2.5" data-path="regression.html"><a href="regression.html#section-82"><i class="fa fa-check"></i><b>4.2.5</b> 模型整体的显著性检验</a></li>
+<li class="chapter" data-level="4.2.6" data-path="regression.html"><a href="regression.html#section-83"><i class="fa fa-check"></i><b>4.2.6</b> 预测</a></li>
+<li class="chapter" data-level="4.2.7" data-path="regression.html"><a href="regression.html#section-84"><i class="fa fa-check"></i><b>4.2.7</b> 案例分析2</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="regression.html"><a href="regression.html#section-85"><i class="fa fa-check"></i><b>4.3</b> 线性模型的推广</a></li>
+<li class="chapter" data-level="4.4" data-path="regression.html"><a href="regression.html#section-86"><i class="fa fa-check"></i><b>4.4</b> 回归诊断</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="regression.html"><a href="regression.html#section-87"><i class="fa fa-check"></i><b>4.4.1</b> 动机</a></li>
+<li class="chapter" data-level="4.4.2" data-path="regression.html"><a href="regression.html#section-88"><i class="fa fa-check"></i><b>4.4.2</b> 残差的定义和性质</a></li>
+<li class="chapter" data-level="4.4.3" data-path="regression.html"><a href="regression.html#section-89"><i class="fa fa-check"></i><b>4.4.3</b> 残差图</a></li>
+<li class="chapter" data-level="4.4.4" data-path="regression.html"><a href="regression.html#section-90"><i class="fa fa-check"></i><b>4.4.4</b> 残差诊断的思路</a></li>
+<li class="chapter" data-level="4.4.5" data-path="regression.html"><a href="regression.html#box-cox"><i class="fa fa-check"></i><b>4.4.5</b> 案例分析：基于Box-Cox变换</a></li>
+<li class="chapter" data-level="4.4.6" data-path="regression.html"><a href="regression.html#section-91"><i class="fa fa-check"></i><b>4.4.6</b> 离群值</a></li>
+<li class="chapter" data-level="4.4.7" data-path="regression.html"><a href="regression.html#section-92"><i class="fa fa-check"></i><b>4.4.7</b> 变量选择</a></li>
+<li class="chapter" data-level="4.4.8" data-path="regression.html"><a href="regression.html#lasso"><i class="fa fa-check"></i><b>4.4.8</b> LASSO</a></li>
+<li class="chapter" data-level="4.4.9" data-path="regression.html"><a href="regression.html#section-93"><i class="fa fa-check"></i><b>4.4.9</b> 回归分析与因果分析</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="regression.html"><a href="regression.html#ex5"><i class="fa fa-check"></i><b>4.5</b> 本章习题</a></li>
+<li class="chapter" data-level="4.6" data-path="regression.html"><a href="regression.html#section-94"><i class="fa fa-check"></i><b>4.6</b> 习题答案</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>5</b> 方差分析</a><ul>
+<li class="chapter" data-level="5.1" data-path="anova.html"><a href="anova.html#section-95"><i class="fa fa-check"></i><b>5.1</b> 引言</a></li>
+<li class="chapter" data-level="5.2" data-path="anova.html"><a href="anova.html#section-96"><i class="fa fa-check"></i><b>5.2</b> 单因子方差分析</a></li>
+<li class="chapter" data-level="5.3" data-path="anova.html"><a href="anova.html#section-97"><i class="fa fa-check"></i><b>5.3</b> 两因子方差分析</a></li>
+<li class="chapter" data-level="5.4" data-path="anova.html"><a href="anova.html#section-98"><i class="fa fa-check"></i><b>5.4</b> 小结</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>6</b> 概率论基础</a><ul>
+<li class="chapter" data-level="6.1" data-path="prob.html"><a href="prob.html#section-99"><i class="fa fa-check"></i><b>6.1</b> 随机现象与随机试验</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="prob.html"><a href="prob.html#section-100"><i class="fa fa-check"></i><b>6.1.1</b> 随机试验、随机现象和随机事件</a></li>
+<li class="chapter" data-level="6.1.2" data-path="prob.html"><a href="prob.html#section-101"><i class="fa fa-check"></i><b>6.1.2</b> 样本空间与随机事件</a></li>
+<li class="chapter" data-level="6.1.3" data-path="prob.html"><a href="prob.html#section-102"><i class="fa fa-check"></i><b>6.1.3</b> 随机事件</a></li>
+<li class="chapter" data-level="6.1.4" data-path="prob.html"><a href="prob.html#section-103"><i class="fa fa-check"></i><b>6.1.4</b> 例</a></li>
+<li class="chapter" data-level="6.1.5" data-path="prob.html"><a href="prob.html#section-104"><i class="fa fa-check"></i><b>6.1.5</b> 事件的关系</a></li>
+<li class="chapter" data-level="6.1.6" data-path="prob.html"><a href="prob.html#section-105"><i class="fa fa-check"></i><b>6.1.6</b> 事件的运算：交、并、差</a></li>
+<li class="chapter" data-level="6.1.7" data-path="prob.html"><a href="prob.html#section-106"><i class="fa fa-check"></i><b>6.1.7</b> 例</a></li>
+<li class="chapter" data-level="6.1.8" data-path="prob.html"><a href="prob.html#section-107"><i class="fa fa-check"></i><b>6.1.8</b> 事件的运算法则</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="section-108.html"><a href="section-108.html"><i class="fa fa-check"></i><b>7</b> 概率的定义</a><ul>
+<li class="chapter" data-level="7.1" data-path="section-108.html"><a href="section-108.html#section-109"><i class="fa fa-check"></i><b>7.1</b> 确定概率的频率方法</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="section-108.html"><a href="section-108.html#section-110"><i class="fa fa-check"></i><b>7.1.1</b> 概率的统计定义</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="section-108.html"><a href="section-108.html#section-111"><i class="fa fa-check"></i><b>7.2</b> 确定概率的古典方法</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="section-108.html"><a href="section-108.html#section-112"><i class="fa fa-check"></i><b>7.2.1</b> 古典概率</a></li>
+<li class="chapter" data-level="7.2.2" data-path="section-108.html"><a href="section-108.html#section-113"><i class="fa fa-check"></i><b>7.2.2</b> 例1：抽球类型</a></li>
+<li class="chapter" data-level="7.2.3" data-path="section-108.html"><a href="section-108.html#mn"><i class="fa fa-check"></i><b>7.2.3</b> 例2：<span class="math inline">\(m\)</span>个质点在<span class="math inline">\(n\)</span>个格子中的分布问题</a></li>
+<li class="chapter" data-level="7.2.4" data-path="section-108.html"><a href="section-108.html#section-114"><i class="fa fa-check"></i><b>7.2.4</b> 例3：同一天生日问题</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="section-108.html"><a href="section-108.html#section-115"><i class="fa fa-check"></i><b>7.3</b> 确定概率的几何方法</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="section-108.html"><a href="section-108.html#section-116"><i class="fa fa-check"></i><b>7.3.1</b> 概率的几何定义</a></li>
+<li class="chapter" data-level="7.3.2" data-path="section-108.html"><a href="section-108.html#section-117"><i class="fa fa-check"></i><b>7.3.2</b> 例1：会面问题</a></li>
+<li class="chapter" data-level="7.3.3" data-path="section-108.html"><a href="section-108.html#section-118"><i class="fa fa-check"></i><b>7.3.3</b> 例2：蒲丰投针实验</a></li>
+<li class="chapter" data-level="7.3.4" data-path="section-108.html"><a href="section-108.html#section-119"><i class="fa fa-check"></i><b>7.3.4</b> 例2：蒲丰投针实验</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="section-108.html"><a href="section-108.html#section-120"><i class="fa fa-check"></i><b>7.4</b> 确定概率的主观方法</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="section-108.html"><a href="section-108.html#section-121"><i class="fa fa-check"></i><b>7.4.1</b> 主观概率</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="section-108.html"><a href="section-108.html#section-122"><i class="fa fa-check"></i><b>7.5</b> 概率的公理化定义</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="section-108.html"><a href="section-108.html#section-123"><i class="fa fa-check"></i><b>7.5.1</b> 概率的公理化定义</a></li>
+<li class="chapter" data-level="7.5.2" data-path="section-108.html"><a href="section-108.html#section-124"><i class="fa fa-check"></i><b>7.5.2</b> 概率的公理化定义</a></li>
+<li class="chapter" data-level="7.5.3" data-path="section-108.html"><a href="section-108.html#section-125"><i class="fa fa-check"></i><b>7.5.3</b> 概率的公理化定义</a></li>
+<li class="chapter" data-level="7.5.4" data-path="section-108.html"><a href="section-108.html#section-126"><i class="fa fa-check"></i><b>7.5.4</b> 概率的性质</a></li>
+<li class="chapter" data-level="7.5.5" data-path="section-108.html"><a href="section-108.html#section-127"><i class="fa fa-check"></i><b>7.5.5</b> 推论一</a></li>
+<li class="chapter" data-level="7.5.6" data-path="section-108.html"><a href="section-108.html#section-128"><i class="fa fa-check"></i><b>7.5.6</b> 推论二</a></li>
+<li class="chapter" data-level="7.5.7" data-path="section-108.html"><a href="section-108.html#section-129"><i class="fa fa-check"></i><b>7.5.7</b> 第一次作业</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="section-130.html"><a href="section-130.html"><i class="fa fa-check"></i><b>8</b> 条件概率与独立性</a><ul>
+<li class="chapter" data-level="8.0.1" data-path="section-130.html"><a href="section-130.html#section-131"><i class="fa fa-check"></i><b>8.0.1</b> 条件概率</a></li>
+<li class="chapter" data-level="8.1" data-path="section-130.html"><a href="section-130.html#section-132"><i class="fa fa-check"></i><b>8.1</b> 条件概率</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="section-130.html"><a href="section-130.html#section-133"><i class="fa fa-check"></i><b>8.1.1</b> 条件概率的定义</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="section-130.html"><a href="section-130.html#section-134"><i class="fa fa-check"></i><b>8.2</b> 乘法公式，全概率公式，贝叶斯公式</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="section-130.html"><a href="section-130.html#section-135"><i class="fa fa-check"></i><b>8.2.1</b> 乘法公式</a></li>
+<li class="chapter" data-level="8.2.2" data-path="section-130.html"><a href="section-130.html#section-136"><i class="fa fa-check"></i><b>8.2.2</b> 例1</a></li>
+<li class="chapter" data-level="8.2.3" data-path="section-130.html"><a href="section-130.html#section-137"><i class="fa fa-check"></i><b>8.2.3</b> 例2</a></li>
+<li class="chapter" data-level="8.2.4" data-path="section-130.html"><a href="section-130.html#section-138"><i class="fa fa-check"></i><b>8.2.4</b> 例3</a></li>
+<li class="chapter" data-level="8.2.5" data-path="section-130.html"><a href="section-130.html#section-139"><i class="fa fa-check"></i><b>8.2.5</b> 案例：敏感性问题调查</a></li>
+<li class="chapter" data-level="8.2.6" data-path="section-130.html"><a href="section-130.html#section-140"><i class="fa fa-check"></i><b>8.2.6</b> 全概率公式(原因推结果)</a></li>
+<li class="chapter" data-level="8.2.7" data-path="section-130.html"><a href="section-130.html#section-141"><i class="fa fa-check"></i><b>8.2.7</b> 例1：敏感性问题调查（续）</a></li>
+<li class="chapter" data-level="8.2.8" data-path="section-130.html"><a href="section-130.html#section-142"><i class="fa fa-check"></i><b>8.2.8</b> 例2</a></li>
+<li class="chapter" data-level="8.2.9" data-path="section-130.html"><a href="section-130.html#section-143"><i class="fa fa-check"></i><b>8.2.9</b> 例3</a></li>
+<li class="chapter" data-level="8.2.10" data-path="section-130.html"><a href="section-130.html#section-144"><i class="fa fa-check"></i><b>8.2.10</b> 案例：水果糖问题</a></li>
+<li class="chapter" data-level="8.2.11" data-path="section-130.html"><a href="section-130.html#bayes"><i class="fa fa-check"></i><b>8.2.11</b> 贝叶斯(Bayes)公式(结果推原因)</a></li>
+<li class="chapter" data-level="8.2.12" data-path="section-130.html"><a href="section-130.html#section-145"><i class="fa fa-check"></i><b>8.2.12</b> 水果糖问题（续）</a></li>
+<li class="chapter" data-level="8.2.13" data-path="section-130.html"><a href="section-130.html#monty-hall-problem"><i class="fa fa-check"></i><b>8.2.13</b> 三门问题(Monty Hall problem)</a></li>
+<li class="chapter" data-level="8.2.14" data-path="section-130.html"><a href="section-130.html#section-146"><i class="fa fa-check"></i><b>8.2.14</b> 例1</a></li>
+<li class="chapter" data-level="8.2.15" data-path="section-130.html"><a href="section-130.html#section-147"><i class="fa fa-check"></i><b>8.2.15</b> 例2</a></li>
+<li class="chapter" data-level="8.2.16" data-path="section-130.html"><a href="section-130.html#section-148"><i class="fa fa-check"></i><b>8.2.16</b> 例2（续）</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="section-130.html"><a href="section-130.html#section-149"><i class="fa fa-check"></i><b>8.3</b> 事件的独立性和试验的独立性</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="section-130.html"><a href="section-130.html#section-150"><i class="fa fa-check"></i><b>8.3.1</b> 事件的独立性</a></li>
+<li class="chapter" data-level="8.3.2" data-path="section-130.html"><a href="section-130.html#section-151"><i class="fa fa-check"></i><b>8.3.2</b> 有限个事件独立</a></li>
+<li class="chapter" data-level="8.3.3" data-path="section-130.html"><a href="section-130.html#section-152"><i class="fa fa-check"></i><b>8.3.3</b> 一个反例</a></li>
+<li class="chapter" data-level="8.3.4" data-path="section-130.html"><a href="section-130.html#section-153"><i class="fa fa-check"></i><b>8.3.4</b> 例1</a></li>
+<li class="chapter" data-level="8.3.5" data-path="section-130.html"><a href="section-130.html#section-154"><i class="fa fa-check"></i><b>8.3.5</b> 例2：系统可靠性</a></li>
+<li class="chapter" data-level="8.3.6" data-path="section-130.html"><a href="section-130.html#i-1"><i class="fa fa-check"></i><b>8.3.6</b> 系统I可靠性分析</a></li>
+<li class="chapter" data-level="8.3.7" data-path="section-130.html"><a href="section-130.html#ii-1"><i class="fa fa-check"></i><b>8.3.7</b> 系统II可靠性分析</a></li>
+<li class="chapter" data-level="8.3.8" data-path="section-130.html"><a href="section-130.html#section-155"><i class="fa fa-check"></i><b>8.3.8</b> 独立试验模型</a></li>
+<li class="chapter" data-level="8.3.9" data-path="section-130.html"><a href="section-130.html#cdotjacob-bernoulli"><i class="fa fa-check"></i><b>8.3.9</b> 雅各布<span class="math inline">\(\cdot\)</span>伯努利(Jacob Bernoulli)</a></li>
+<li class="chapter" data-level="8.3.10" data-path="section-130.html"><a href="section-130.html#section-156"><i class="fa fa-check"></i><b>8.3.10</b> 二项概率公式</a></li>
+<li class="chapter" data-level="8.3.11" data-path="section-130.html"><a href="section-130.html#section-157"><i class="fa fa-check"></i><b>8.3.11</b> 例1</a></li>
+<li class="chapter" data-level="8.3.12" data-path="section-130.html"><a href="section-130.html#section-158"><i class="fa fa-check"></i><b>8.3.12</b> 例2</a></li>
+<li class="chapter" data-level="8.3.13" data-path="section-130.html"><a href="section-130.html#section-159"><i class="fa fa-check"></i><b>8.3.13</b> 第二次作业</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="exam.html"><a href="exam.html"><i class="fa fa-check"></i><b>9</b> 综合练习</a><ul>
+<li class="chapter" data-level="9.1" data-path="exam.html"><a href="exam.html#section-160"><i class="fa fa-check"></i><b>9.1</b> 2018秋季试卷</a></li>
+<li class="chapter" data-level="9.2" data-path="exam.html"><a href="exam.html#section-161"><i class="fa fa-check"></i><b>9.2</b> 2018秋季试卷答案</a></li>
+<li class="chapter" data-level="9.3" data-path="exam.html"><a href="exam.html#section-162"><i class="fa fa-check"></i><b>9.3</b> 2019春季试卷</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>参考文献</a></li>
+<li class="divider"></li>
+<li><a href="http://www2.scut.edu.cn/math/2018/0118/c14638a254123/page.htm" target="blank">版权归作者所有</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">数理统计讲义</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-108" class="section level1">
+<h1><span class="header-section-number">第 7 章</span> 概率的定义</h1>
+<div id="section-109" class="section level2">
+<h2><span class="header-section-number">7.1</span> 确定概率的频率方法</h2>
+<div id="section-110" class="section level3">
+<h3><span class="header-section-number">7.1.1</span> 概率的统计定义</h3>
+<p>设事件<span class="math inline">\(A\)</span>在<span class="math inline">\(n\)</span>次试验中出现了<span class="math inline">\(r\)</span>次，则比值
+称为事件<span class="math inline">\(A\)</span>在<span class="math inline">\(n\)</span>次试验中出现的频率。</p>
+<p>在同一组条件下所作的中，事件<span class="math inline">\(A\)</span>出现的频率总是在区间<span class="math inline">\([0,1]\)</span>上的一个确定的常数<span class="math inline">\(p\)</span>附近摆动，并且稳定于<span class="math inline">\(p\)</span>，则<span class="math inline">\(p\)</span>称为事件<span class="math inline">\(A\)</span>的概率，记作。</p>
+<p><span class="math inline">\(P(\)</span><span class="math inline">\()\)</span>。如，<span class="math inline">\(P(\)</span>骰子的点数<span class="math inline">\()=1/6\)</span>是错误的。</p>
+</div>
+</div>
+<div id="section-111" class="section level2">
+<h2><span class="header-section-number">7.2</span> 确定概率的古典方法</h2>
+<div id="section-112" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> 古典概率</h3>
+<p>的随机试验要求满足下两条件：</p>
+<ul>
+<li><p><span class="underline">有限性</span>。只有有限多个不同的基本事件。</p></li>
+<li><p><span class="underline">等可能性</span>。每个基本事件出现的可能性相等。</p></li>
+</ul>
+<p>在古典概型中，如果基本事件（样本点）的总数为<span class="math inline">\(n\)</span>，事件<span class="math inline">\(A\)</span>所包含的基本事件（样本点）个数为<span class="math inline">\(r(r\le n)\)</span>，则定义事件<span class="math inline">\(A\)</span>的概率<span class="math inline">\(P(A)\)</span>为<span class="math inline">\(r/n\)</span>。即
+<span class="math display">\[P(A)=\frac{r}{n}=\frac{\text{A中包含的基本事件的个数}}{\text{基本事件的总数}}\]</span></p>
+<p>抛<strong>均匀的</strong>硬币、骰子<br />
+古典概型的取值范围？</p>
+</div>
+<div id="section-113" class="section level3">
+<h3><span class="header-section-number">7.2.2</span> 例1：抽球类型</h3>
+<p>袋中有<span class="math inline">\(a\)</span>个黄球，<span class="math inline">\(b\)</span>个白球，从中接连任意取出<span class="math inline">\(k\)</span>个球<span class="math inline">\((k\leq a+b)\)</span>，且每次取出的球<strong>不再放回去</strong>，求第<span class="math inline">\(k\)</span>次取出的球是黄球的概率？</p>
+<ul>
+<li><ul>
+<li>基本事件？</li>
+</ul></li>
+<li>是否是古典概型？有限性、等可能性？</li>
+</ul>
+<p>考虑第1次到第<span class="math inline">\(k\)</span>次的取球结果。
+<span class="math display">\[P(A)=\frac{C_a^1A_{a+b-1}^{k-1}}{A_{a+b}^{k}}=\frac{a}{a+b}\]</span>
+只考虑第<span class="math inline">\(k\)</span>次的取球结果。
+<span class="math display">\[P(A)=\frac{C_a^1}{C_{a+b}^{1}}=\frac{a}{a+b}\]</span>
+抽签与顺序无关（如同有放回的情况）！基本事件是相对的！</p>
+</div>
+<div id="mn" class="section level3">
+<h3><span class="header-section-number">7.2.3</span> 例2：<span class="math inline">\(m\)</span>个质点在<span class="math inline">\(n\)</span>个格子中的分布问题</h3>
+<p>设有<span class="math inline">\(m\)</span>个不同质点，每个质点都以概率<span class="math inline">\(1/n\)</span>落入<span class="math inline">\(n\)</span>个格子(<span class="math inline">\(n\ge m\)</span>)的每一个之中，求下列事件的概率：</p>
+<ol style="list-style-type: decimal">
+<li><p>A: 指定<span class="math inline">\(m\)</span>个格子中各有一个质点；</p></li>
+<li><p>B: 任意<span class="math inline">\(m\)</span>个格子中各有一个质点；</p></li>
+<li><p>C: 指定的一个格子中恰有<span class="math inline">\(k(k\le m)\)</span>个质点。</p></li>
+</ol>
+<p><span class="math display">\[\begin{aligned}
+     P(A) &amp;= \frac{m!}{n^m}\\
+     P(B) &amp;= \frac{C_n^mm!}{n^m}=\frac{A_n^m}{n^m}\\
+     P(C) &amp;= \frac{C_m^k(n-1)^{m-k}}{n^m}
+     \end{aligned}\]</span></p>
+</div>
+<div id="section-114" class="section level3">
+<h3><span class="header-section-number">7.2.4</span> 例3：同一天生日问题</h3>
+<p>某班级有<span class="math inline">\(n\)</span>个人，问至少有两个人的生日在同一天的概率为多大？（假设一年有365天）</p>
+<p>记<span class="math inline">\(A=\)</span>{<span class="math inline">\(n\)</span>个人中至少有两个人的生日相同}。<span class="math inline">\(\bar{A}=\)</span>{<span class="math inline">\(n\)</span>个人中的生日全不相同},
+易知</p>
+<p><span class="math display">\[P(\bar{A})=\frac{A_{365}^n}{365^n}=\frac{365!}{365^n(365-n)!}.\]</span>
+因此， <span class="math display">\[P(A)=1-P(\bar{A})=1-\frac{365!}{365^n(365-n)!}.\]</span></p>
+<p>上述只是对<span class="math inline">\(n\le 365\)</span>成立。如果<span class="math inline">\(n&gt;365\)</span>，则显然<span class="math inline">\(P(A)=1\)</span>.***联系生日攻击问题***</p>
+</div>
+</div>
+<div id="section-115" class="section level2">
+<h2><span class="header-section-number">7.3</span> 确定概率的几何方法</h2>
+<div id="section-116" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> 概率的几何定义</h3>
+<p>平面上有可测的区域<span class="math inline">\(G\)</span>和<span class="math inline">\(g\)</span>，向<span class="math inline">\(G\)</span>中随机投掷一点<span class="math inline">\(M\)</span>，设<span class="math inline">\(M\)</span>必落在<span class="math inline">\(G\)</span>内。如<span class="math inline">\(M\)</span>落在<span class="math inline">\(g\)</span>内的概率只与<span class="math inline">\(g\)</span>的面积成正比，而与<span class="math inline">\(g\)</span>的位置和形状无关。这样的随机实验，称为。点<span class="math inline">\(M\)</span>落入<span class="math inline">\(G\)</span>内的部分区域<span class="math inline">\(g\)</span>的概率为：
+<span class="math display">\[P = \frac{g\text{的面积}}{G\text{的面积}}\]</span></p>
+<p>随机投点是指<span class="math inline">\(M\)</span>落入<span class="math inline">\(G\)</span>内任一处均是等可能的。<br />
+几何概型的取值范围？</p>
+</div>
+<div id="section-117" class="section level3">
+<h3><span class="header-section-number">7.3.2</span> 例1：会面问题</h3>
+<p>已知甲乙两船将在同一天的0点到24点之间随机地到达码头，该码头只有一个泊位。若甲先到达，需停靠6小时后才离开码头。若乙先到达，则要停靠8小时后才离开码头。问这两船中有船需等候泊位空出的概率?</p>
+<p>设甲船到达码头的时刻是<span class="math inline">\(x\)</span>，乙船到达码头的时刻是<span class="math inline">\(y\)</span>，显然<span class="math inline">\(0\le x,y\le 24\)</span>。若这两船中有船需等候泊位空出，则<span class="math inline">\(y-x&lt; 6\)</span>且<span class="math inline">\(x-y&lt; 8\)</span>.</p>
+<p>0.5</p>
+<p>0.5 <span class="math display">\[\begin{aligned}
+         P(A)  &amp;= \frac{24^2-(16^2+18^2)/2}{24^2}\\&amp;\approx 0.4965
+         \end{aligned}\]</span></p>
+</div>
+<div id="section-118" class="section level3">
+<h3><span class="header-section-number">7.3.3</span> 例2：蒲丰投针实验</h3>
+<p>0.6
+是几何概率的开创者，并以蒲丰投针问题闻名于世，发表在其1777年的论著《或然性算术试验》中。</p>
+<p>由于通过他的投针试验法可以利用很多次随机投针试验算出<span class="math inline">\(\pi\)</span>的近似值，所以特别引人瞩目，这也是最早的几何概
+率问题。并且蒲丰本人对这个实验给予证明。</p>
+<p>1850年，瑞士数学家在苏黎世，用一根长<span class="math inline">\(36mm\)</span>的针，平行线间距为<span class="math inline">\(45mm\)</span>，投掷
+<span class="math inline">\(5000\)</span>
+次，得<span class="math inline">\(\pi\approx3.1596\)</span>。1864年，英国人投掷了<span class="math inline">\(1100\)</span>次，求得<span class="math inline">\(\pi\approx3.1419\)</span>。1901年，意大利人投掷了<span class="math inline">\(3408\)</span>次，得到了准确到6位小数的<span class="math inline">\(\pi\)</span>值。</p>
+<p>0.4</p>
+<div class="figure">
+<img src="buffon.png" alt="" />
+<p class="caption">George-Louis Leclerc de Buffon
+(1707.9.7-1788.4.16)，法国数学家、自然科学家。</p>
+</div>
+</div>
+<div id="section-119" class="section level3">
+<h3><span class="header-section-number">7.3.4</span> 例2：蒲丰投针实验</h3>
+<p>平面上画着一些平行线，它们之间的距离等于<span class="math inline">\(a\)</span>,向此平面任投长度为<span class="math inline">\(\ell(\ell&lt;a)\)</span>
+的针，试求此针与任一平行线相交的概率。</p>
+<p>设<span class="math inline">\(x\)</span>表示针的中点到最近的一条平行线的距离，<span class="math inline">\(\theta\)</span>表示针与平行线的交角。显然<span class="math inline">\(0\le x\le a/2\)</span>,
+<span class="math inline">\(0\le \theta\le \pi\)</span>.
+为使针与平行线相交，必须<span class="math inline">\(x\le \frac{\ell}{2}\sin\theta\)</span>.</p>
+<p>0.3</p>
+<p>0.3</p>
+<p>0.4 所求的概率为： <span class="math display">\[\begin{aligned}
+            P &amp;= \frac{\frac \ell 2\int_0^\pi\sin\theta\mrd\theta }{\frac 1 2\pi a}=\frac{2\ell}{\pi a}.
+            \end{aligned}\]</span> 若取<span class="math inline">\(\ell = a/2\)</span>，则
+<a href="http://www.randomservices.org/random/apps/BuffonNeedleExperiment.html"></a></p>
+</div>
+</div>
+<div id="section-120" class="section level2">
+<h2><span class="header-section-number">7.4</span> 确定概率的主观方法</h2>
+<div id="section-121" class="section level3">
+<h3><span class="header-section-number">7.4.1</span> 主观概率</h3>
+<p>统计界的贝叶斯学派认为：。</p>
+<ul>
+<li><p>天气预报说“明天下雨的概率为90%”</p></li>
+<li><p>医生说“手术成功可能性为90%”</p></li>
+<li><p>我说“考试及格的可能性为99%”</p></li>
+</ul>
+<p>注意区别“主观概率”与“主观臆造”。</p>
+</div>
+</div>
+<div id="section-122" class="section level2">
+<h2><span class="header-section-number">7.5</span> 概率的公理化定义</h2>
+<div id="section-123" class="section level3">
+<h3><span class="header-section-number">7.5.1</span> 概率的公理化定义</h3>
+<p>前面学了三种概率定义，各有其局限性。</p>
+<ul>
+<li><p>要求作大量重复试验。</p></li>
+<li><p>试验结果要求有限、互不相容、等可能。</p></li>
+<li><p>落入区域G内任一点是等可能的。</p>
+<div class="figure">
+<img src="feibiao.jpg" alt="" />
+<p class="caption">image</p>
+</div></li>
+</ul>
+<p>如何刻画更一般的情况？1900年数学家提出要建立概率的公理化定义来解决这个问题，即。1933年苏联数学家首次提出了概率的公理化定义，这个定义既概括了历史上几种概率的共同特征，又避免了各自的局限性和含混之处，不管什么随机现象，只要满足该定义的三条公理，才能说它是概率。</p>
+</div>
+<div id="section-124" class="section level3">
+<h3><span class="header-section-number">7.5.2</span> 概率的公理化定义</h3>
+<p>样本空间<span class="math inline">\(\Omega\)</span>，事件域<span class="math inline">\(\mf\)</span>，概率测度<span class="math inline">\(P:\mf\to [0,1]\)</span>。由三元组定义一个概率空间。</p>
+<p>是由样本空间的一些子集构成的集合，并满足以下条件：</p>
+<ul>
+<li><p><span class="math inline">\(\Omega\in \mf\)</span>;</p></li>
+<li><p>如果<span class="math inline">\(A\in\mf\)</span>, 则<span class="math inline">\(\bar{A}\in \mf\)</span>;</p></li>
+<li><p>如果<span class="math inline">\(A_n\in\mf\)</span>, <span class="math inline">\(n=1,\dots,\infty\)</span>,
+则<span class="math inline">\(\bigcup_{n=1}^\infty A_n\in \mf\)</span>.</p></li>
+</ul>
+<p>试证明：<span class="math inline">\(\varnothing \in \mf\)</span>. 如果<span class="math inline">\(A_n\in\mf\)</span>,
+<span class="math inline">\(\bigcap_{n=1}^\infty A_n\in \mf\)</span>.</p>
+</div>
+<div id="section-125" class="section level3">
+<h3><span class="header-section-number">7.5.3</span> 概率的公理化定义</h3>
+<p>样本空间<span class="math inline">\(\Omega\)</span>，事件域<span class="math inline">\(\mf\)</span>，概率测度<span class="math inline">\(P:\mf\to [0,1]\)</span>。由三元组定义一个概率空间。</p>
+<p>度量事件<span class="math inline">\(A\in \mf\)</span>发生的概率，满足下面三个公理。</p>
+<ul>
+<li><p><span class="math inline">\(\forall A\in \mf\)</span>, <span class="math inline">\(0\le P(A)\)</span>;</p></li>
+<li><p><span class="math inline">\(P(\Omega)=1\)</span>;</p></li>
+<li><p>对可列个两两互斥的事件<span class="math inline">\(A_1,A_2,\dots,A_n,\dots\)</span>有，
+<span class="math display">\[P\left(\bigcup_{i=1}^\infty A_i\right)=\sum_{i=1}^{\infty}P(A_i).\]</span></p></li>
+</ul>
+<p>：古典概率和几何概率是否符合该公理化定义？</p>
+</div>
+<div id="section-126" class="section level3">
+<h3><span class="header-section-number">7.5.4</span> 概率的性质</h3>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(P(\varnothing)=0\)</span></p></li>
+<li><p>如果<span class="math inline">\(A,B\)</span>互斥，则<span class="math inline">\(P(A+B)=P(A)+P(B)\)</span>.</p></li>
+<li><p>如果<span class="math inline">\(A\subset B\)</span>,则<span class="math inline">\(P(A)\le P(B)\)</span>.</p></li>
+<li><p><span class="math inline">\(P(\bar{A})=1-P(A)\)</span></p></li>
+<li><p><span class="math inline">\(P(A\backslash B)=P(A)-P(AB)\)</span></p></li>
+<li><p><span class="math inline">\(P(A\cup B)=P(A)+P(B)-P(AB)\)</span></p></li>
+<li><p>如果<span class="math inline">\(A_1\supset A_2\supset \cdots\supset A_n\cdots\)</span>，则
+<span class="math display">\[P\left(\bigcap_{i=1}^\infty A_i\right)=\lim_{i\to\infty}P(A_i).\]</span></p></li>
+<li><p>如果<span class="math inline">\(A_1\subset A_2\subset \cdots\subset A_n\cdots\)</span>，则
+<span class="math display">\[P\left(\bigcup_{i=1}^\infty A_i\right)=\lim_{i\to\infty}P(A_i).\]</span></p></li>
+</ol>
+</div>
+<div id="section-127" class="section level3">
+<h3><span class="header-section-number">7.5.5</span> 推论一</h3>
+<p>： 对任意两个事件<span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, 有 <span class="math display">\[P(A\cup B)\le P(A)+P(B).\]</span>
+对任意<span class="math inline">\(n\)</span>个事件<span class="math inline">\(A_1,A_2,\dots,A_n\)</span>, 有
+<span class="math display">\[P(\cup_{i=1}^nA_i)\le \sum_{i=1}^{n}P(A_i).\]</span></p>
+</div>
+<div id="section-128" class="section level3">
+<h3><span class="header-section-number">7.5.6</span> 推论二</h3>
+<p>证明下列命题：</p>
+<ol style="list-style-type: decimal">
+<li><p>若<span class="math inline">\(A_1\)</span>与<span class="math inline">\(A_2\)</span>同时发生时<span class="math inline">\(A\)</span>发生，则有<span class="math inline">\(P(A)\ge P(A_1)+P(A_2)-1\)</span>.</p>
+<p>因为<span class="math inline">\(A_1A_2\subset A\)</span>，则<span class="math inline">\(P(A)\ge P(A_1A_2)\)</span>. 又 <span class="math display">\[\begin{aligned}
+        P(A_1A_2)&amp;=P(A_1)+P(A_2)-P(A_1\cup A_2)\notag\\&amp;\ge P(A_1)+P(A_2)-1.\label{eq:1}
+       \end{aligned}\]</span></p></li>
+<li><p>若<span class="math inline">\(A_1A_2A_3\subset A\)</span>，则有<span class="math inline">\(P(A)\ge P(A_1)+P(A_2)+P(A_3)-2\)</span>.</p>
+<p>由第一题结论得到<span class="math inline">\(P(A)\ge P(A_1A_2)+P(A_3)-1\)</span>.
+再由<a href="#eq:1" reference-type="eqref" reference="eq:1"><span class="math display">\[eq:1\]</span></a>可得所需结果。</p></li>
+</ol>
+<p>若<span class="math inline">\(\bigcap_{i=1}^nA_i\subset A\)</span>，则<span class="math inline">\(P(A)\ge\sum_{i=1}^nP(A_i)-n+1\)</span>.</p>
+</div>
+<div id="section-129" class="section level3">
+<h3><span class="header-section-number">7.5.7</span> 第一次作业</h3>
+<p>第一章习题：1.3, 1.4, 1.6, 1.12, 1.15, 1.18</p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="prob.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="section-130.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
