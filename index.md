@@ -5,7 +5,6 @@
 
 ## 发表论文
 
-```markdown
 (1) Z. He and X. Wang. Good Path Generation Methods in Quasi-Monte Carlo for Pricing Financial Derivatives, SIAM Journal on Scientific Computing, 36 (2), B171-B197, 2014. 
 
 (2) Z. He and X. Wang. On the Convergence Rate of Randomized Quasi-Monte Carlo for Discontinuous Functions, SIAM Journal on Numerical Analysis, 53 (5), 2488-2503, 2015. 
@@ -27,5 +26,3 @@
 (10) F. Xie, Z. He, and X. Wang. An Importance Sampling-Based Smoothing Approach for Quasi-Monte Carlo Simulation of Barrier Options. European Journal of Operational Research, 274 (2), 759-772, 2019. 
 
 (11) Z. He. On the Error Rate of Conditional Quasi-Monte Carlo for Discontinuous Functions. SIAM Journal on Numerical Analysis, 57(2), 854-874, 2019. 
-
-```
